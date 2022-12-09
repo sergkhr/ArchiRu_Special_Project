@@ -1,0 +1,449 @@
+/*Hero*/
+.hero {
+    color: #FFFFFF;
+}
+.hero__container {
+    height: 460px;
+    width: 100%;
+}
+.hero__img {
+    background: url(../img/2.jpg) 0 0 / cover;
+    z-index: -1;
+    width: 100%;
+    /*height: calc(100vh - 100px);*/
+    height: 460px;
+    position: absolute;
+}
+.hero__content {
+    text-align: center;
+    /*max-width: 56vw;*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 1370px;
+}
+.hero__tags {
+    font-family: 'Vida Pro 32';
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+.hero h1 {
+    font-family: 'Vida Pro 32';
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    text-transform: uppercase;
+    margin: 95px auto 0px;
+}
+.hero__intro {
+    font-family: 'Vida Pro 32';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 30px auto 0;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.menu__list {
+    font-family: 'Vida Pro 32';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    list-style-type: none;
+    display: flex;
+}
+.menu__item {
+    margin-right: 2.9vw;
+}
+.menu__link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.partners {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.partners h4 {
+    font-family: 'Vida Pro 32';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #858585;
+    margin-left: 140px;
+    text-transform: uppercase;
+}
+.partners__list {
+    display: flex;
+    align-items: center;
+    margin-right: 13vw;
+}
+.partners__item {
+    margin-left: 3.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partners__item img {
+    height: 28px;
+}
+@media (min-width: 1540px) and (max-width: 1980px) {
+    .partners {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .partners h4 {
+        margin-left: 140px;
+    }
+    .partners__list {
+        margin-right: 100px;
+    }
+    .partners__item {
+        margin-left: 34px;
+    }
+}
+@media (min-width: 1240px) and (max-width: 1540px) {
+    .hero {
+        color: #FFFFFF;
+    }
+    .hero__container {
+        height: 450px;
+        width: 100%;
+    }
+    .hero__img {
+        background: url(../img/2.jpg) 0 0 / cover;
+        z-index: -1;
+        width: 100%;
+        /*height: calc(100vh - 100px);*/
+        height: 450px;
+        position: absolute;
+    }
+    .hero__content {
+        text-align: center;
+        /*max-width: 56vw;*/
+        margin-left: auto;
+        margin-right: auto;
+        width: 976px;
+    }
+    .hero__tags {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        top: 30px;
+    }
+    .hero h1 {
+        font-family: 'Vida Pro 32';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 86px;
+        text-transform: uppercase;
+        margin: 95px auto 0px;
+    }
+    .hero__intro {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        margin: 30px auto 0;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 34px;
+    }
+    .menu__list {
+        font-family: 'Vida Pro 32';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        list-style-type: none;
+        display: flex;
+    }
+    .menu__item {
+        margin-right: 2.9vw;
+    }
+    .menu__link {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .partners {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .partners h4 {
+        font-family: 'Vida Pro 32';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #858585;
+        margin-left: 174px;
+        text-transform: uppercase;
+    }
+}
+@media (min-width: 960px) and (max-width: 1240px) {
+    .hero {
+        color: #FFFFFF;
+    }
+    .hero__container {
+        height: 450px;
+        width: 100%;
+    }
+    .hero__img {
+        background: url(../img/2.jpg) 0 0 / cover;
+        z-index: -1;
+        width: 100%;
+        /*height: calc(100vh - 100px);*/
+        height: 450px;
+        position: absolute;
+    }
+    .hero__content {
+        text-align: center;
+        /*max-width: 56vw;*/
+        margin-left: auto;
+        margin-right: auto;
+        width: 880px;
+    }
+    .hero__tags {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        top: 30px;
+    }
+    .hero h1 {
+        font-family: 'Vida Pro 32';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 86px;
+        text-transform: uppercase;
+        margin: 95px auto 0px;
+    }
+    .hero__intro {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        margin: 30px auto 0;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 34px;
+    }
+    .menu__list {
+        font-family: 'Vida Pro 32';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        list-style-type: none;
+        display: flex;
+    }
+    .menu__item {
+        margin-right: 2.9vw;
+    }
+    .menu__link {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .partners {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .partners h4 {
+        font-family: 'Vida Pro 32';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #858585;
+        margin-left: 112px;
+        text-transform: uppercase;
+    }
+}
+@media (min-width: 640px) and (max-width: 960px) {
+    .hero {
+        color: #FFFFFF;
+    }
+    .hero__container {
+        height: 590px;
+        width: 100%;
+    }
+    .hero__img {
+        background: url(../img/2.jpg) 0 0 / cover;
+        z-index: -1;
+        width: 100%;
+        /*height: calc(100vh - 100px);*/
+        height: 590px;
+        position: absolute;
+    }
+    .hero__content {
+        text-align: center;
+        /*max-width: 56vw;*/
+        margin-left: auto;
+        margin-right: auto;
+        width: 580px;
+    }
+    .hero__tags {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        top: 30px;
+    }
+    .hero h1 {
+        font-family: 'Vida Pro 32';
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 86px;
+        text-transform: uppercase;
+        margin: 95px auto 0px;
+    }
+    .hero__intro {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        margin: 30px auto 0;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 21px;
+    }
+    .menu__list {
+        font-family: 'Vida Pro 32';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        list-style-type: none;
+        display: flex;
+    }
+    .menu__item {
+        margin-right: 2.9vw;
+    }
+    .menu__link {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .partners {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .partners h4 {
+        font-family: 'Vida Pro 32';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #858585;
+        margin-left: 122px;
+        text-transform: uppercase;
+    }
+}
+@media (min-width: 320px) and (max-width: 640px) {
+    .hero__container {
+        height: 640px;
+    }
+    .hero__img {
+        height: 640px;
+        background: url(../img/1.jpg) 0 0 / cover;
+    }
+    .hero__tags {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        top: 31px;
+    }
+    .hero__content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 280px;
+    }
+    .hero h1 {
+        font-size: 32px;
+        line-height: 38px;
+        text-transform: uppercase;
+        margin: 95px auto 0;
+    }
+    .hero__intro {
+        font-family: 'Vida Pro 32';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        margin: 30px auto 0;
+    }
+    .menu {
+        display: none;
+    }
+    .partners {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+        padding-left: 12px;
+        padding-right: 40px;
+    }
+    .partners h4 {
+        font-size: 16px;
+        margin-top: 18px;
+        margin-right: 0;
+        margin-left: 27px;
+        letter-spacing: 0.05em;
+    }
+    .partners__list {
+        margin-right: 23px;
+        padding-left: 0;
+        margin-bottom: 41px;
+    }
+    .partners__item {
+        margin-left: 27px;
+        display: block;
+        align-items: center;
+    }
+    .partners__item img {
+        /*width: 52%;*/
+        height: 22px;
+    }
+}

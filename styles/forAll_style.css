@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Vida Pro 32';
+    src: url('../../fonts/Vida32Pro.eot');
+    src: url('../../fonts/Vida32Pro.eot?#iefix') format('embedded-opentype'), url('../../fonts/Vida32Pro.woff') format('woff'), url('../../fonts/Vida32Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Плавный скрол документа по якорям*/
+html {
+    scroll-behavior: smooth;
+}

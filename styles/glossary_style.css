@@ -1,0 +1,232 @@
+/*Glossary*/
+#glo {
+    height: 1px;
+}
+.glossary{
+    padding-top: 80px;
+    margin: -80px auto 60px auto;
+}
+.section__header {
+    /*should actually be aplied to all section headers*/
+    font-family: 'Vida Pro 32';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 21px;
+    /*23 + 50*/
+    margin-bottom: 20px;
+    padding-left: 140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.glossary__container {
+    background: #0066FF;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+.glossary__top-arrow img {
+    margin-left: auto;
+    margin-right: auto;
+}
+.glossary__list_wrap {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1780px;
+}
+.glossary__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 78px;
+    margin-bottom: 56px;
+    padding-left: 0;
+}
+.glossary__list_item {
+    font-family: 'Vida Pro 32';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    padding: 20px 28px;
+}
+.glossary__list_item.glossary1 {
+    position: relative;
+}
+.glossary__list_item ul {
+    list-style-type: none;
+}
+.glossary__list_item ul li {
+    display: none;
+}
+/*
+.glossary__list_item:hover.glossary__list_item ul li {
+    display: block;
+}
+*/
+.glossary__list_item:hover {
+    color: #0066FF;
+    background: #FFFFFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.glossary__list_item.opened {
+    color: #0066FF;
+    background: #FFFFFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.glossary__content {
+    z-index: 1;
+    color: #0066FF;
+    background: #FFFFFF;
+    font-family: 'Georgia';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: none;
+    width: 100vw;
+    margin-left: calc((1780px - 100vw) / 2);
+    position: absolute;
+    left: 0px;
+    /* padding-left: 40px; */
+    transform: translate(0px, 20px);
+}
+.glossary__content.glossary1 {
+    width: 600px;
+    left: auto;
+    margin-left: 0;
+}
+.glossary__content > div {
+    position: relative;
+    max-width: 600px;
+    padding: 28px;
+    margin: auto;
+}
+.glossary__content.glossary2 div {
+    padding: 28px 0px 28px 28px;
+}
+.glossary__content_background {
+    background: #FFFFFF;
+    width: 200vw;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+.glossary__content .content__closer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: auto;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.glossary__content .content__closer > span {
+    transform: rotate(45deg);
+}
+.glossary__bottom-arrow img {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 35px;
+}
+@media (min-width: 1980px) and (max-width: 2400px) {
+    .glossary h2 {
+        padding-left: 140px;
+    }
+}
+@media (min-width: 1540px) and (max-width: 1980px) {
+    .glossary h2 {
+        padding-left: 140px;
+    }
+    .glossary__content {
+        margin-left: -5vw;
+    }
+}
+@media (min-width: 1240px) and (max-width: 1540px) {
+    .glossary h2 {
+        padding-left: 174px;
+    }
+    .glossary__content {
+        margin-left: -5vw;
+    }
+}
+@media (min-width: 960px) and (max-width: 1240px) {
+    .glossary h2 {
+        padding-left: 112px;
+    }
+    .glossary__content {
+        margin-left: -5vw;
+    }
+}
+@media (min-width: 640px) and (max-width: 960px) {
+    .glossary h2 {
+        padding-left: 122px;
+    }
+    .glossary__list_wrap {
+        width: auto;
+    }
+    .glossary__list {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .glossary__list_item:hover.glossary__list_item ul li {
+        display: block;
+    }
+    .glossary__list_item:hover {
+        text-decoration: underline;
+    }
+    .glossary__content {
+        margin-left: 0;
+    }
+    .glossary__content p {
+        width: 90%;
+    }
+}
+@media (min-width: 320px) and (max-width: 640px) {
+    .glossary h2 {
+        padding-left: 40px;
+    }
+    .glossary__container {
+        margin-bottom: 80px;
+    }
+    .glossary__bottom-arrow img {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .glossary__list_wrap {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+    .glossary__list_item {
+        font-size: 20px;
+        width: 100%;
+    }
+    .glossary__list_item:hover.glossary__list_item ul li {
+        display: block;
+    }
+    .glossary__list_item:hover {
+        text-decoration: underline;
+    }
+    .glossary__content {
+        margin-left: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .glossary__content.glossary1 {
+        width: 100vw;
+        left: 0;
+    }
+}
