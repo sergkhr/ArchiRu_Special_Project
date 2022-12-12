@@ -20,7 +20,7 @@
 			<ul class="footer__socials_container">
 				<li><a class="tg" href="https://t.me/archi_ru" target="_blank" title="Telegram"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a></li>
 				<li><a class="vk" href="https://vk.com/archiru" target="_blank" title="Вконтакте"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
-				<li><a class="twit" href="https://twitter.com/archiru_portal" target="_blank" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+				<?php /* ?><li><a class="twit" href="https://twitter.com/archiru_portal" target="_blank" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li><?php */ ?>
 			</ul>
 		</div>
 

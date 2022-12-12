@@ -57,19 +57,14 @@
                         <ul class="header__socials_container">
                             <li><a class="tg" href="https://t.me/archi_ru" target="_blank" title="Telegram"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a></li>
                             <li><a class="vk" href="https://vk.com/archiru" target="_blank" title="Вконтакте"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
-                            <li><a class="twit" href="https://twitter.com/archiru_portal" target="_blank" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <?php /* ?><li><a class="twit" href="https://twitter.com/archiru_portal" target="_blank" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li><?php */ ?>
                         </ul>
                      </div>
                      <div class="header__box_achor-menu">
                         <div class="header__box_line-mobile"></div>
-                        <div class="header__box_achor-menu--title">архитектурный бетон</div>
+                        <div class="header__box_achor-menu--title"><?=news_title_short?></div>
                             <ul class="header__menu_inner">
-                                    <li><a class="menu__item" href="#art">статьи</a></li>
-                                    <li><a class="menu__item" href="#obj">объекты</a></li>
-                                    <li><a class="menu__item" href="#glo">глоссарий</a></li>
-                                    <li><a class="menu__item" href="#faq_m">вопросы/ответы</a></li>
-                                    <!--code below doesn't work-->
-                                    <?php $i=0; foreach ($project_info->project_info_menu as $menu_item){ ?>
+                                    <?php $i=0; foreach ($project_info_menu as $menu_item){ ?>
                                         <li><a class="menu__item" href="#section_<?=$menu_item->block_id?>"><?=$menu_item->block_title ?></a></li>
                                     <?php $i++; } ?>
                             </ul>
@@ -79,7 +74,6 @@
               </div>
               <form class="header__search">
                 <input placeholder="поиск" type="search">
-                
               </form>
             
         </div>

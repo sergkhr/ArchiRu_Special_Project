@@ -38,13 +38,18 @@ $print_version_url = 'https://archi.ru/print/news/';
 
 if($project_info->img_bg_desktop){
     $bg_image_desktop = "//i.archi.ru/i/$project_info->img_bg_desktop";
+    $hero_font_color = $project_info->hero_font_color;
     //$this->params['bg_image_desktop'] = $bg_image_desktop;
 }
 if($project_info->img_bg_mobile){$bg_image_mobile = "//i.archi.ru/i/$project_info->img_bg_mobile";}
 ?>
 
 <?php
-$this->registerCss('@media (min-width: 640px){
+$css = '
+.hero__content h1{
+    color: #' . $hero_font_color . ';
+}
+@media (min-width: 640px){
    .hero__img {
       background: url(' . $bg_image_desktop . ') 0 0 / cover;
    }
@@ -53,10 +58,10 @@ $this->registerCss('@media (min-width: 640px){
    .hero__img {
       background: url(' . $bg_image_mobile . ') 0 0 / cover;
    }
-}');
+}';
 ?>
 <main>
-    <?= $this->render("info_project/header"); ?>    
+    <?= $this->render("info_project/header", ['news_title_short' => $project_info->news_title_short, 'project_info_menu' => $project_info->project_info_menu]); ?>    
     <section class="hero">
         <div class="hero__container">
             <img class="hero__img">
@@ -72,6 +77,23 @@ $this->registerCss('@media (min-width: 640px){
                 <?php $i++; } ?>
                 </ul>
               </nav>
+            <?php
+                $menu_bg_color = $project_info->menu_bg_color;
+                $menu_font_size = $project_info->menu_font_size;
+                $menu_bg_transp = $project_info->menu_bg_transp;
+            ?>
+            <?php if($menu_bg_color!='' || $menu_font_size!="100"):?>
+            <style>
+                <?php if($menu_bg_transp!='1'):?>
+                .menu__item{
+                    background-color: #<?=$menu_bg_color?>;
+                }
+                <?php endif; ?>
+                .menu__link{
+                    font-size: <?=$menu_font_size?>%;
+                }
+            </style>
+            <?php endif; ?>
 <!--
               <div class="hamburger-menu">
                 <input id="menu__toggle" type="checkbox" />
@@ -89,7 +111,26 @@ $this->registerCss('@media (min-width: 640px){
     </section>
 
 <?php foreach($project_info->project_info_blocks as $project_info_block): ?>
-    
+    <?php
+        $block_fullscreen = $project_info_block->block_fullscreen;
+        $block_width = $project_info_block->block_width;
+        $block_fullscreen == '1' ? $block_fullsceen_s = 'none' : $block_fullsceen_s = $block_width . 'px';
+        $block_id = $project_info_block->block_id;
+        $block_img_bg_desktop = $project_info_block->block_img_bg_desktop;
+        $block_img_bg_mobile = $project_info_block->block_img_bg_mobile;
+        $block_img_bg_d_height = $project_info_block->block_img_bg_d_height;
+        $block_img_bg_text = $project_info_block->block_img_bg_text;
+        $block_img_bg_text_color = $project_info_block->block_img_bg_text_color;
+        
+$css .= '
+#section_' . $block_id . ' {
+    max-width: ' . $block_fullsceen_s. ';
+}
+#section_' . $block_id . ' > h2{
+    max-width: ' . $block_width . 'px;
+}
+';
+    ?>
     <?php if($project_info_block->block_type=='3'): ?>
         <?php if(count($project_info_block->partners_data)!=0):?>
             <?= $this->render("info_project/block_partners", ['block_id' => $project_info_block->block_id, 'block_title' => $project_info_block->block_title, 
@@ -108,7 +149,16 @@ $this->registerCss('@media (min-width: 640px){
                                         'mobile_detect' => $mobile_detect,
                                         'block_data' => $project_info_block->block_records_data]); ?>
                 <?php elseif($project_info_block->block_scroll=='2'):?>
+<?php /* ?> FLEX
                     <?= $this->render("info_project/block_texts_1", ['block_id' => $project_info_block->block_id, 
+                                        'block_title' => $project_info_block->block_title, 
+                                        'rec_img_path' => $rec_img_path,
+                                        'decor_img_path' => $decor_img_path,
+                                        'block_scroll_2_rows' => $project_info_block->block_scroll_2_rows,
+                                        'mobile_detect' => $mobile_detect,
+                                        'block_data' => $project_info_block->block_records_data]); ?>
+<?php */ ?>
+                    <?= $this->render("info_project/block_grid_texts_1.php", ['block_id' => $project_info_block->block_id, 
                                         'block_title' => $project_info_block->block_title, 
                                         'rec_img_path' => $rec_img_path,
                                         'decor_img_path' => $decor_img_path,
@@ -160,8 +210,21 @@ $this->registerCss('@media (min-width: 640px){
             <?php endif; ?>
         <?php endif;?>
 
+    <?php elseif($project_info_block->block_type=='5'): ?>
+        <?= $this->render("info_project/block_shutter", ['block_id' => $project_info_block->block_id, 
+                          'block_title' => $project_info_block->block_title, 
+                          'rec_img_path' => $rec_img_path,
+                          'block_img_bg_desktop' => $block_img_bg_desktop,
+                          'block_img_bg_mobile' => $block_img_bg_mobile,
+                          'block_img_bg_d_height' => $block_img_bg_d_height,
+                          'block_img_bg_text' => $block_img_bg_text,
+                          'block_img_bg_text_color' => $block_img_bg_text_color]); ?>
+
     <?php endif; ?>
+    
+    
 <?php endforeach; ?>
+<?php $this->registerCss($css); ?>
 
 <?= $this->render("info_project/footer", ['bg_image_desktop' => $bg_image_desktop, 'menu' => $project_info->project_info_menu, 'accessTest' => $this->context->accessTest]); ?>    
 

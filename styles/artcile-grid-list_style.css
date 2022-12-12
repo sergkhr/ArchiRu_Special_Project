@@ -41,6 +41,7 @@
     max-width: none;
     width: 100%;
     height: auto;
+    visibility: hidden;
 }
 .article-grid-list__item {
     height: auto;
